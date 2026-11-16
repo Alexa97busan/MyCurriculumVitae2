@@ -387,17 +387,17 @@
 <style>
 /* 모션 레이어: vm- 접두사. 스크롤 연동 히어로 + 배경 타임라인 + 등장 애니메이션 */
 .vm-hero{height:auto;overflow:visible;background:none}
-.vm-stage{position:sticky;top:0;z-index:2;height:340px;overflow:hidden;background:#fff}
+.vm-stage{position:sticky;top:0;z-index:2;height:400px;overflow:hidden;background:#fff}
 .vm-scene{position:absolute;inset:0;opacity:0;transform:scale(1.06);transition:opacity .9s ease,transform 1.6s ease}
 .vm-scene.on{opacity:1;transform:scale(1)}
-.vm-scene img{width:100%;height:100%;object-fit:contain;object-position:50% 50%;display:block}
+.vm-scene img{width:100%;height:calc(100% - 118px);object-fit:contain;object-position:50% 50%;display:block}
 .vm-scene::after{content:none}
-.vm-cap{position:absolute;left:58px;bottom:38px;z-index:1;color:var(--ink,#1b2430);max-width:520px;opacity:0;transform:translateY(14px);transition:opacity .7s ease .25s,transform .7s ease .25s}
+.vm-cap{position:absolute;left:58px;right:58px;bottom:34px;z-index:1;color:var(--ink,#1b2430);opacity:0;transform:translateY(14px);transition:opacity .7s ease .25s,transform .7s ease .25s}
 .vm-scene.on .vm-cap{opacity:1;transform:none}
 .vm-cap small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
 .vm-cap b{display:block;font-size:30px;line-height:1.2;margin:6px 0 4px;letter-spacing:-.01em}
 .vm-cap p{margin:0;font-size:15px;opacity:.92}
-.vm-dots{position:absolute;right:58px;bottom:44px;z-index:1;display:flex;gap:6px}
+.vm-dots{position:absolute;right:58px;bottom:14px;z-index:1;display:flex;gap:6px}
 .vm-dots i{display:block;width:6px;height:6px;border-radius:3px;background:rgba(27,36,48,.25);transition:all .4s ease}
 .vm-dots i.on{width:22px;background:var(--ink,#1b2430)}
 .vm-track{height:calc(var(--vm-n,4) * 45vh)}
@@ -410,7 +410,7 @@
 .page{position:relative;z-index:1}
 .vm-js .vm-reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
 .vm-js .vm-reveal.in{opacity:1;transform:none}
-@media (max-width:700px){.vm-stage{height:170px}.vm-cap{left:20px;right:20px;bottom:16px}.vm-cap b{font-size:22px}.vm-dots{display:none}}
+@media (max-width:700px){.vm-stage{height:260px}.vm-scene img{height:calc(100% - 96px)}.vm-cap{left:20px;right:20px;bottom:22px}.vm-cap b{font-size:22px}.vm-dots{display:none}}
 @media print{
   .vm-bg{display:none!important}
   .vm-track,.vm-dots{display:none!important}
@@ -421,7 +421,7 @@
   .vm-js .vm-reveal{opacity:1!important;transform:none!important}
 }
 </style>
-<style>.vm-stage{height:170px}.vm-cap{left:20px;right:20px}.vm-cap b{font-size:22px}.vm-dots{display:none}</style>
+<style>.vm-stage{height:260px}.vm-scene img{height:calc(100% - 96px)}.vm-cap{left:20px;right:20px}.vm-cap b{font-size:22px}.vm-dots{display:none}</style>
 </head>
 <body>
 <a class="dl-btn" href="Seungwon_Jeong_Resume.pdf" download>PDF 다운로드 ⬇</a>
